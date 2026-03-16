@@ -1,0 +1,18 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F7F2EA"/>
+  <circle cx="980" cy="170" r="155" fill="#E7D8CA"/>
+  <circle cx="220" cy="700" r="210" fill="#DCE5DA"/>
+  <rect x="120" y="120" width="960" height="660" rx="36" fill="#FFFDF8"/>
+  <rect x="170" y="170" width="430" height="560" rx="28" fill="#F2E8DB"/>
+  <path d="M368 255C432 255 492 307 492 390V477C492 573 425 648 332 668" stroke="#10243D" stroke-width="16" stroke-linecap="round"/>
+  <path d="M368 255C304 255 244 307 244 390V477C244 573 311 648 404 668" stroke="#10243D" stroke-width="16" stroke-linecap="round"/>
+  <path d="M298 441C316 463 338 475 368 475C398 475 420 463 438 441" stroke="#C4935E" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="332" cy="386" r="14" fill="#10243D"/>
+  <circle cx="406" cy="386" r="14" fill="#10243D"/>
+  <rect x="682" y="250" width="220" height="90" rx="22" fill="#10243D"/>
+  <path d="M736 295H848" stroke="#F7F2EA" stroke-width="16" stroke-linecap="round"/>
+  <path d="M792 247V343" stroke="#F7F2EA" stroke-width="16" stroke-linecap="round"/>
+  <rect x="664" y="420" width="254" height="170" rx="24" fill="#E7EEE4"/>
+  <path d="M714 504C742 468 771 450 801 450C831 450 860 468 888 504" stroke="#7F8F7A" stroke-width="14" stroke-linecap="round"/>
+  <text x="650" y="126" fill="#B68A4B" font-family="Arial, sans-serif" font-size="32" letter-spacing="6">AESTHETIC WELLNESS</text>
+</svg>

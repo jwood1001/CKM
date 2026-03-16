@@ -1,0 +1,14 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F7F2EA"/>
+  <circle cx="930" cy="180" r="150" fill="#E3D6C8"/>
+  <circle cx="260" cy="720" r="230" fill="#D9E4D8"/>
+  <rect x="120" y="120" width="960" height="660" rx="36" fill="#FFFDF8"/>
+  <rect x="180" y="180" width="420" height="540" rx="28" fill="#F1E8D9"/>
+  <path d="M390 290C442.467 290 485 332.533 485 385V540C485 592.467 442.467 635 390 635C337.533 635 295 592.467 295 540V385C295 332.533 337.533 290 390 290Z" fill="#7F8F7A"/>
+  <circle cx="390" cy="236" r="58" fill="#10243D"/>
+  <circle cx="790" cy="300" r="78" fill="#10243D"/>
+  <path d="M830 300C830 340.869 796.869 374 756 374C715.131 374 682 340.869 682 300C682 259.131 715.131 226 756 226C763.367 226 770.483 227.077 777.199 229.08C751.893 240.38 734 263.749 734 291.5C734 329.332 764.668 360 802.5 360C812.098 360 821.236 358.024 829.529 354.451C817.648 367.068 800.802 374 782.5 374" fill="#F7F2EA"/>
+  <path d="M686 494H914" stroke="#7F8F7A" stroke-width="18" stroke-linecap="round"/>
+  <path d="M686 560H914" stroke="#7F8F7A" stroke-width="18" stroke-linecap="round"/>
+  <text x="650" y="126" fill="#B68A4B" font-family="Arial, sans-serif" font-size="32" letter-spacing="6">HORMONE SUPPORT</text>
+</svg>

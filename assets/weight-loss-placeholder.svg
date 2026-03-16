@@ -1,0 +1,17 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F7F2EA"/>
+  <circle cx="930" cy="180" r="160" fill="#E2D3BE"/>
+  <circle cx="250" cy="690" r="220" fill="#D8E1D4"/>
+  <rect x="120" y="140" width="960" height="620" rx="36" fill="#FFFDF8"/>
+  <rect x="180" y="210" width="380" height="460" rx="26" fill="#F1E8D9"/>
+  <path d="M370 305C417.496 305 456 343.504 456 391V503C456 550.496 417.496 589 370 589C322.504 589 284 550.496 284 503V391C284 343.504 322.504 305 370 305Z" fill="#C4935E"/>
+  <path d="M332 262C332 241.013 349.013 224 370 224C390.987 224 408 241.013 408 262V296H332V262Z" fill="#10243D"/>
+  <rect x="650" y="230" width="300" height="220" rx="24" fill="#10243D"/>
+  <circle cx="800" cy="340" r="74" stroke="#F7F2EA" stroke-width="20"/>
+  <path d="M800 266V341L852 374" stroke="#F7F2EA" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="650" y="490" width="300" height="150" rx="24" fill="#E6EDE2"/>
+  <path d="M710 565C748 524 774 513 812 513C850 513 879 532 890 562" stroke="#7F8F7A" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="720" cy="565" r="16" fill="#7F8F7A"/>
+  <circle cx="882" cy="565" r="16" fill="#7F8F7A"/>
+  <text x="650" y="126" fill="#B68A4B" font-family="Arial, sans-serif" font-size="32" letter-spacing="6">MEDICAL WEIGHT LOSS</text>
+</svg>

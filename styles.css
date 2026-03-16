@@ -407,12 +407,37 @@ h3 {
   padding: 54px 0 18px;
 }
 
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.page-hero h1 {
+  font-size: clamp(2.5rem, 4vw, 4.3rem);
+  max-width: 14ch;
+}
+
 .page-lead {
   max-width: 68ch;
   margin: 18px 0 0;
   color: var(--muted);
   line-height: 1.8;
   font-size: 1.06rem;
+}
+
+.visual-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+}
+
+.visual-card img {
+  width: 100%;
+  border-radius: 24px;
 }
 
 .detail-grid,
@@ -540,6 +565,7 @@ h3 {
 
 @media (max-width: 1080px) {
   .hero,
+  .page-hero-grid,
   .split-layout,
   .detail-grid,
   .comparison-grid,

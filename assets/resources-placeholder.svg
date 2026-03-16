@@ -1,0 +1,17 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F7F2EA"/>
+  <circle cx="965" cy="180" r="150" fill="#DCE5DA"/>
+  <circle cx="220" cy="700" r="210" fill="#E6D8C5"/>
+  <rect x="120" y="120" width="960" height="660" rx="36" fill="#FFFDF8"/>
+  <rect x="180" y="180" width="380" height="540" rx="28" fill="#F1E8D9"/>
+  <rect x="230" y="250" width="280" height="360" rx="18" fill="#10243D"/>
+  <path d="M270 330H470" stroke="#F7F2EA" stroke-width="14" stroke-linecap="round"/>
+  <path d="M270 390H470" stroke="#F7F2EA" stroke-width="14" stroke-linecap="round"/>
+  <path d="M270 450H430" stroke="#F7F2EA" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="820" cy="350" r="92" fill="#E7EEE4"/>
+  <path d="M820 294V406" stroke="#7F8F7A" stroke-width="18" stroke-linecap="round"/>
+  <path d="M764 350H876" stroke="#7F8F7A" stroke-width="18" stroke-linecap="round"/>
+  <rect x="680" y="500" width="280" height="110" rx="24" fill="#10243D"/>
+  <path d="M742 555H900" stroke="#F7F2EA" stroke-width="16" stroke-linecap="round"/>
+  <text x="650" y="126" fill="#B68A4B" font-family="Arial, sans-serif" font-size="32" letter-spacing="6">RESOURCE CENTER</text>
+</svg>

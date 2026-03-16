@@ -1,0 +1,17 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F7F2EA"/>
+  <circle cx="1000" cy="200" r="150" fill="#DDE6DA"/>
+  <circle cx="220" cy="700" r="210" fill="#E7D9C7"/>
+  <rect x="120" y="120" width="960" height="660" rx="36" fill="#FFFDF8"/>
+  <rect x="180" y="200" width="400" height="500" rx="28" fill="#F0E7D8"/>
+  <path d="M306 585V401C306 348.533 348.533 306 401 306H417C469.467 306 512 348.533 512 401V585" stroke="#10243D" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="410" cy="250" r="54" fill="#10243D"/>
+  <rect x="650" y="220" width="300" height="110" rx="24" fill="#10243D"/>
+  <path d="M720 275H880" stroke="#F7F2EA" stroke-width="16" stroke-linecap="round"/>
+  <path d="M800 235V315" stroke="#F7F2EA" stroke-width="16" stroke-linecap="round"/>
+  <rect x="650" y="380" width="300" height="240" rx="24" fill="#E8EFE4"/>
+  <path d="M718 470H880" stroke="#7F8F7A" stroke-width="14" stroke-linecap="round"/>
+  <path d="M718 530H880" stroke="#7F8F7A" stroke-width="14" stroke-linecap="round"/>
+  <path d="M718 590H826" stroke="#7F8F7A" stroke-width="14" stroke-linecap="round"/>
+  <text x="650" y="126" fill="#B68A4B" font-family="Arial, sans-serif" font-size="32" letter-spacing="6">DIRECT PRIMARY CARE</text>
+</svg>

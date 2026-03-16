@@ -17,6 +17,13 @@ while ($listener.IsListening) {
 
     $filePath = Join-Path $root $reqPath
 
+    if (-not (Test-Path $filePath) -and [string]::IsNullOrWhiteSpace([IO.Path]::GetExtension($filePath))) {
+      $htmlCandidate = "$filePath.html"
+      if (Test-Path $htmlCandidate) {
+        $filePath = $htmlCandidate
+      }
+    }
+
     if ((Test-Path $filePath) -and -not (Get-Item $filePath).PSIsContainer) {
       $ext = [IO.Path]::GetExtension($filePath).ToLowerInvariant()
       $contentType = switch ($ext) {
