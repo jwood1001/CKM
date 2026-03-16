@@ -32,11 +32,13 @@ while ($listener.IsListening) {
         ".js" { "application/javascript; charset=utf-8" }
         ".json" { "application/json; charset=utf-8" }
         ".md" { "text/markdown; charset=utf-8" }
+        ".svg" { "image/svg+xml" }
         default { "application/octet-stream" }
       }
 
       $bytes = [IO.File]::ReadAllBytes($filePath)
       $context.Response.ContentType = $contentType
+      $context.Response.Headers["Content-Type"] = $contentType
       $context.Response.ContentLength64 = $bytes.Length
       $context.Response.OutputStream.Write($bytes, 0, $bytes.Length)
     } else {

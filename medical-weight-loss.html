@@ -31,7 +31,7 @@
           <a href="/services.html">Services</a>
           <a class="current" href="/medical-weight-loss.html">Weight Loss</a>
           <a href="/direct-primary-care.html">Primary Care</a>
-          <a href="/hormone-support.html">Hormones</a>
+          <a href="/hormone-support.html">BioTe</a>
           <a href="/resources.html">Resources</a>
           <a href="/pricing.html">Pricing</a>
           <a href="/about.html">About</a>
@@ -58,7 +58,7 @@
               </div>
             </div>
             <div class="visual-card">
-              <img src="/assets/weight-loss-placeholder.svg" alt="Weight loss consultation placeholder" />
+              <img src="https://ckmhealth.com/wp-content/uploads/2024/06/C4ABFA41-3C70-46D3-91FE-4C6B990191D6-scaled.jpg" alt="Chelsie Mangum placeholder image for medical weight loss" />
             </div>
           </div>
         </section>
@@ -171,6 +171,43 @@
             <p class="eyebrow">Reference progress chart</p>
             <h2>Use realistic range guidance, not hype.</h2>
           </div>
+          <div class="panel-card">
+            <div class="form-grid">
+              <div class="field">
+                <label for="estimate-sex">Male or female</label>
+                <select id="estimate-sex">
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="estimate-age">Age range</label>
+                <select id="estimate-age">
+                  <option value="18-39">18 to 39</option>
+                  <option value="40-55">40 to 55</option>
+                  <option value="56+">56 and older</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="estimate-height-feet">Height</label>
+                <div class="form-grid">
+                  <div class="field">
+                    <input id="estimate-height-feet" type="number" min="4" max="7" value="5" />
+                  </div>
+                  <div class="field">
+                    <input id="estimate-height-inches" type="number" min="0" max="11" value="6" />
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label for="estimate-weight">Current weight in pounds</label>
+                <input id="estimate-weight" type="number" min="90" max="600" value="220" />
+              </div>
+            </div>
+            <p class="disclaimer" id="estimate-summary">
+              Select sex, age, height, and weight to see a more personalized reference range and BMI estimate.
+            </p>
+          </div>
           <div class="panel-card prose">
             <p>
               The chart below is a reference-style planning tool for demo purposes. It is not a promise of results,
@@ -183,11 +220,13 @@
             </p>
           </div>
           <div class="table-wrap">
-            <table class="progress-table">
+            <table class="progress-table" id="progress-table">
               <thead>
                 <tr>
                   <th>Sex</th>
                   <th>Age Range</th>
+                  <th>Starting Weight</th>
+                  <th>BMI</th>
                   <th>Wk 1</th>
                   <th>Wk 2</th>
                   <th>Wk 3</th>
@@ -202,96 +241,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Female</td>
-                  <td>18 to 39</td>
-                  <td>0.3 to 0.8%</td>
-                  <td>0.6 to 1.4%</td>
-                  <td>0.9 to 2.0%</td>
-                  <td>1.3 to 2.8%</td>
-                  <td>2.4 to 4.5%</td>
-                  <td>3.5 to 6.5%</td>
-                  <td>4.6 to 8.2%</td>
-                  <td>5.6 to 9.7%</td>
-                  <td>6.5 to 11.2%</td>
-                  <td>8.5 to 14.2%</td>
-                  <td>10.0 to 16.8%</td>
-                </tr>
-                <tr>
-                  <td>Female</td>
-                  <td>40 to 55</td>
-                  <td>0.3 to 0.7%</td>
-                  <td>0.5 to 1.3%</td>
-                  <td>0.8 to 1.9%</td>
-                  <td>1.2 to 2.6%</td>
-                  <td>2.2 to 4.2%</td>
-                  <td>3.2 to 6.0%</td>
-                  <td>4.2 to 7.6%</td>
-                  <td>5.1 to 9.0%</td>
-                  <td>6.0 to 10.4%</td>
-                  <td>7.8 to 13.3%</td>
-                  <td>9.2 to 15.5%</td>
-                </tr>
-                <tr>
-                  <td>Female</td>
-                  <td>56+</td>
-                  <td>0.2 to 0.6%</td>
-                  <td>0.5 to 1.1%</td>
-                  <td>0.7 to 1.7%</td>
-                  <td>1.0 to 2.3%</td>
-                  <td>1.9 to 3.8%</td>
-                  <td>2.8 to 5.4%</td>
-                  <td>3.8 to 6.9%</td>
-                  <td>4.6 to 8.2%</td>
-                  <td>5.4 to 9.5%</td>
-                  <td>7.0 to 12.0%</td>
-                  <td>8.2 to 14.0%</td>
-                </tr>
-                <tr>
-                  <td>Male</td>
-                  <td>18 to 39</td>
-                  <td>0.3 to 0.9%</td>
-                  <td>0.7 to 1.5%</td>
-                  <td>1.0 to 2.2%</td>
-                  <td>1.4 to 3.0%</td>
-                  <td>2.6 to 4.9%</td>
-                  <td>3.8 to 7.0%</td>
-                  <td>5.0 to 8.8%</td>
-                  <td>6.1 to 10.4%</td>
-                  <td>7.1 to 12.0%</td>
-                  <td>9.2 to 15.0%</td>
-                  <td>10.8 to 17.8%</td>
-                </tr>
-                <tr>
-                  <td>Male</td>
-                  <td>40 to 55</td>
-                  <td>0.3 to 0.8%</td>
-                  <td>0.6 to 1.4%</td>
-                  <td>0.9 to 2.0%</td>
-                  <td>1.3 to 2.8%</td>
-                  <td>2.4 to 4.6%</td>
-                  <td>3.5 to 6.7%</td>
-                  <td>4.6 to 8.4%</td>
-                  <td>5.7 to 9.9%</td>
-                  <td>6.7 to 11.4%</td>
-                  <td>8.7 to 14.4%</td>
-                  <td>10.1 to 16.8%</td>
-                </tr>
-                <tr>
-                  <td>Male</td>
-                  <td>56+</td>
-                  <td>0.2 to 0.7%</td>
-                  <td>0.5 to 1.2%</td>
-                  <td>0.8 to 1.8%</td>
-                  <td>1.1 to 2.5%</td>
-                  <td>2.1 to 4.0%</td>
-                  <td>3.1 to 5.8%</td>
-                  <td>4.1 to 7.3%</td>
-                  <td>5.0 to 8.7%</td>
-                  <td>5.9 to 10.0%</td>
-                  <td>7.6 to 12.8%</td>
-                  <td>8.9 to 15.0%</td>
-                </tr>
+                <tr id="estimate-row"></tr>
               </tbody>
             </table>
           </div>
@@ -364,5 +314,75 @@
         </div>
       </footer>
     </div>
+    <script>
+      const estimateSex = document.getElementById("estimate-sex");
+      const estimateAge = document.getElementById("estimate-age");
+      const estimateHeightFeet = document.getElementById("estimate-height-feet");
+      const estimateHeightInches = document.getElementById("estimate-height-inches");
+      const estimateWeight = document.getElementById("estimate-weight");
+      const estimateSummary = document.getElementById("estimate-summary");
+      const estimateRow = document.getElementById("estimate-row");
+
+      const points = [
+        { label: "Wk 1", factor: 0.0045 },
+        { label: "Wk 2", factor: 0.009 },
+        { label: "Wk 3", factor: 0.013 },
+        { label: "Wk 4", factor: 0.018 },
+        { label: "Mo 2", factor: 0.03 },
+        { label: "Mo 3", factor: 0.045 },
+        { label: "Mo 4", factor: 0.06 },
+        { label: "Mo 5", factor: 0.072 },
+        { label: "Mo 6", factor: 0.085 },
+        { label: "Mo 9", factor: 0.11 },
+        { label: "Mo 12", factor: 0.13 }
+      ];
+
+      function clamp(value, min, max) {
+        return Math.min(Math.max(value, min), max);
+      }
+
+      function updateEstimate() {
+        const sex = estimateSex.value;
+        const age = estimateAge.value;
+        const feet = Number(estimateHeightFeet.value || 0);
+        const inches = Number(estimateHeightInches.value || 0);
+        const weight = Number(estimateWeight.value || 0);
+        const totalInches = feet * 12 + inches;
+        const bmi = totalInches > 0 ? (weight / (totalInches * totalInches)) * 703 : 0;
+
+        let ageFactor = 1;
+        if (age === "40-55") ageFactor = 0.95;
+        if (age === "56+") ageFactor = 0.87;
+
+        let sexFactor = sex === "male" ? 1.08 : 1;
+        let bmiFactor = clamp((bmi - 24) / 18, 0.85, 1.35);
+
+        const lowFactor = ageFactor * sexFactor * bmiFactor * 0.9;
+        const highFactor = ageFactor * sexFactor * bmiFactor * 1.1;
+
+        const cells = [];
+        cells.push(`<td>${sex === "male" ? "Male" : "Female"}</td>`);
+        cells.push(`<td>${age}</td>`);
+        cells.push(`<td>${weight.toFixed(0)} lb</td>`);
+        cells.push(`<td>${bmi.toFixed(1)}</td>`);
+
+        points.forEach((point) => {
+          const low = weight * point.factor * lowFactor;
+          const high = weight * point.factor * highFactor;
+          cells.push(`<td>${low.toFixed(1)} to ${high.toFixed(1)} lb</td>`);
+        });
+
+        estimateRow.innerHTML = cells.join("");
+        estimateSummary.textContent =
+          `Reference estimate for a ${sex} patient age ${age}, ${feet}'${inches}" and ${weight.toFixed(0)} lb. Estimated BMI: ${bmi.toFixed(1)}. These are average-range planning numbers only and individual results vary.`;
+      }
+
+      [estimateSex, estimateAge, estimateHeightFeet, estimateHeightInches, estimateWeight].forEach((input) => {
+        input.addEventListener("input", updateEstimate);
+        input.addEventListener("change", updateEstimate);
+      });
+
+      updateEstimate();
+    </script>
   </body>
 </html>

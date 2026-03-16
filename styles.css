@@ -93,7 +93,7 @@ img {
 .brand-name {
   display: inline-block;
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.8rem;
+  font-size: 1.65rem;
   font-weight: 700;
   color: var(--ink);
 }
@@ -101,9 +101,22 @@ img {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 22px;
+  justify-content: center;
+  gap: 18px;
   color: var(--muted);
-  font-size: 0.96rem;
+  font-size: 0.92rem;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.site-nav a {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.site-nav a.current {
+  color: var(--ink);
+  font-weight: 800;
 }
 
 .button {
@@ -158,7 +171,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(3.5rem, 7vw, 6.6rem);
+  font-size: clamp(2.5rem, 4vw, 4.3rem);
   max-width: 12ch;
 }
 
