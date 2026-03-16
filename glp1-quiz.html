@@ -56,7 +56,7 @@
             </div>
             <div class="quiz-highlight">
               <div class="visual-card">
-                <img src="https://ckmhealth.com/wp-content/uploads/2024/06/C4ABFA41-3C70-46D3-91FE-4C6B990191D6-scaled.jpg" alt="Chelsie Mangum at CKM Health and Wellness" />
+                <img src="/assets/photos/weight-loss.jpg" alt="Weight-loss progress placeholder with waist measurement" />
               </div>
               <div class="panel-card quiz-preview">
                 <span class="card-kicker">What this quiz does</span>
@@ -115,9 +115,13 @@
                   <label for="ageRange">Age range</label>
                   <select id="ageRange" name="ageRange" required>
                     <option value="">Select one</option>
-                    <option value="18-39">18 to 39</option>
-                    <option value="40-55">40 to 55</option>
-                    <option value="56+">56 and older</option>
+                    <option value="20-30">20 to 30</option>
+                    <option value="31-40">31 to 40</option>
+                    <option value="41-50">41 to 50</option>
+                    <option value="51-60">51 to 60</option>
+                    <option value="61-70">61 to 70</option>
+                    <option value="71-80">71 to 80</option>
+                    <option value="80+">80 and above</option>
                   </select>
                 </div>
                 <div class="field">
@@ -309,8 +313,11 @@
           score -= 1;
         }
 
-        if (data.get("ageRange") === "40-55") score += 1;
-        if (data.get("ageRange") === "56+") score -= 1;
+        if (data.get("ageRange") === "31-40") score += 1;
+        if (data.get("ageRange") === "51-60") score -= 1;
+        if (data.get("ageRange") === "61-70") score -= 2;
+        if (data.get("ageRange") === "71-80") score -= 3;
+        if (data.get("ageRange") === "80+") score -= 4;
 
         let rating = "Maybe";
         let badgeClass = "result-maybe";

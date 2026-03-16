@@ -58,7 +58,7 @@
               </div>
             </div>
             <div class="visual-card">
-              <img src="https://ckmhealth.com/wp-content/uploads/2024/06/C4ABFA41-3C70-46D3-91FE-4C6B990191D6-scaled.jpg" alt="Chelsie Mangum placeholder image for medical weight loss" />
+              <img src="/assets/photos/weight-loss.jpg" alt="Weight-loss progress placeholder with waist measurement" />
             </div>
           </div>
         </section>
@@ -102,6 +102,10 @@
                 <li>Fit3D body-composition monitoring for more meaningful progress tracking</li>
                 <li>Nutritional counseling and practical habit support</li>
               </ul>
+              <div class="service-links">
+                <a href="/services.html#fit3d">Why Fit3D works for you</a>
+                <a href="/resources.html#fit3d-guide">See how CKM tracks progress</a>
+              </div>
             </div>
             <aside class="panel-card">
               <span class="card-kicker">What the program can include</span>
@@ -155,6 +159,117 @@
           </div>
         </section>
 
+        <section class="section" id="progress-estimator">
+          <div class="section-heading compact">
+            <p class="eyebrow">Reference progress planner</p>
+            <h2>See a clearer range, not just one number.</h2>
+          </div>
+          <div class="panel-card">
+            <div class="form-grid">
+              <div class="field">
+                <label for="estimate-sex">Male or female</label>
+                <select id="estimate-sex">
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="estimate-age">Age range</label>
+                <select id="estimate-age">
+                  <option value="20-30">20 to 30</option>
+                  <option value="31-40">31 to 40</option>
+                  <option value="41-50">41 to 50</option>
+                  <option value="51-60">51 to 60</option>
+                  <option value="61-70">61 to 70</option>
+                  <option value="71-80">71 to 80</option>
+                  <option value="80+">80 and above</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="estimate-height-feet">Height</label>
+                <div class="inline-fields">
+                  <input id="estimate-height-feet" type="number" min="4" max="7" value="5" />
+                  <input id="estimate-height-inches" type="number" min="0" max="11" value="6" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="estimate-weight">Current weight in pounds</label>
+                <input id="estimate-weight" type="number" min="90" max="600" value="220" />
+              </div>
+            </div>
+            <p class="disclaimer" id="estimate-summary">
+              Select sex, age, height, and weight to see a more personalized reference range, projected 12-month weight range, and possible BMI shift.
+            </p>
+
+            <div class="estimate-grid">
+              <div class="estimate-stat">
+                <span>Starting BMI</span>
+                <strong id="stat-bmi">0.0</strong>
+              </div>
+              <div class="estimate-stat">
+                <span>12-Month Loss</span>
+                <strong id="stat-loss">0 to 0 lb</strong>
+              </div>
+              <div class="estimate-stat">
+                <span>12-Month Weight</span>
+                <strong id="stat-weight-range">0 to 0 lb</strong>
+              </div>
+              <div class="estimate-stat">
+                <span>12-Month BMI</span>
+                <strong id="stat-bmi-range">0.0 to 0.0</strong>
+              </div>
+            </div>
+
+            <div class="chart-shell">
+              <svg id="estimate-chart" class="line-chart" viewBox="0 0 920 340" role="img" aria-label="Reference weight-loss range chart"></svg>
+              <div class="chart-legend">
+                <span><i style="background:#7f8f7a"></i>Conservative range</span>
+                <span><i style="background:#b68a4b"></i>Mid-range reference</span>
+                <span><i style="background:#10243d"></i>Higher response range</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-card prose">
+            <p>
+              This chart is meant to make the range easier to understand at a glance. It is not a promise of results.
+              Real progress varies based on starting point, medication tolerance, consistency, nutrition, activity,
+              sleep, underlying health factors, and whether the plan is followed closely.
+            </p>
+            <p class="disclaimer">
+              Reference only. Individual results vary. CKM is providing these ranges as a general planning guide for supervised medical weight-loss conversations, not as a guarantee of outcomes.
+            </p>
+          </div>
+
+          <div class="table-wrap">
+            <table class="progress-table" id="progress-table">
+              <thead>
+                <tr>
+                  <th>Sex</th>
+                  <th>Age Range</th>
+                  <th>Start Wt</th>
+                  <th>Start BMI</th>
+                  <th>Wk 1</th>
+                  <th>Wk 2</th>
+                  <th>Wk 3</th>
+                  <th>Wk 4</th>
+                  <th>Mo 2</th>
+                  <th>Mo 3</th>
+                  <th>Mo 4</th>
+                  <th>Mo 5</th>
+                  <th>Mo 6</th>
+                  <th>Mo 9</th>
+                  <th>Mo 12</th>
+                  <th>12-Mo BMI</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="estimate-row"></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         <section class="section">
           <div class="panel-card prose">
             <h2>What to know before you start.</h2>
@@ -178,90 +293,10 @@
               <li>Check in if side effects feel disruptive or unexpected</li>
               <li>Use body-composition data to understand progress more fully</li>
             </ul>
-            <p class="disclaimer">
-              Educational content should support informed conversations, not replace individualized medical advice.
-            </p>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-heading compact">
-            <p class="eyebrow">Reference progress chart</p>
-            <h2>Use realistic range guidance, not hype.</h2>
-          </div>
-          <div class="panel-card">
-            <div class="form-grid">
-              <div class="field">
-                <label for="estimate-sex">Male or female</label>
-                <select id="estimate-sex">
-                  <option value="female">Female</option>
-                  <option value="male">Male</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="estimate-age">Age range</label>
-                <select id="estimate-age">
-                  <option value="18-39">18 to 39</option>
-                  <option value="40-55">40 to 55</option>
-                  <option value="56+">56 and older</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="estimate-height-feet">Height</label>
-                <div class="form-grid">
-                  <div class="field">
-                    <input id="estimate-height-feet" type="number" min="4" max="7" value="5" />
-                  </div>
-                  <div class="field">
-                    <input id="estimate-height-inches" type="number" min="0" max="11" value="6" />
-                  </div>
-                </div>
-              </div>
-              <div class="field">
-                <label for="estimate-weight">Current weight in pounds</label>
-                <input id="estimate-weight" type="number" min="90" max="600" value="220" />
-              </div>
+            <div class="service-links">
+              <a href="/resources.html">More GLP-1 best practices</a>
+              <a href="/services.html#fit3d">Fit3D body scanner details</a>
             </div>
-            <p class="disclaimer" id="estimate-summary">
-              Select sex, age, height, and weight to see a more personalized reference range and BMI estimate.
-            </p>
-          </div>
-          <div class="panel-card prose">
-            <p>
-              The chart below is a reference-style planning tool for demo purposes. It is not a promise of results,
-              and it should be presented as an average-range conversation starter rather than a guarantee. Real progress
-              varies based on starting point, medication tolerance, consistency, nutrition, activity, sleep, underlying
-              health factors, and whether the plan is followed closely.
-            </p>
-            <p class="disclaimer">
-              Reference only. Individual results vary. CKM is providing these ranges as a general guide for supervised medical weight-loss planning, not as a guarantee of outcomes.
-            </p>
-          </div>
-          <div class="table-wrap">
-            <table class="progress-table" id="progress-table">
-              <thead>
-                <tr>
-                  <th>Sex</th>
-                  <th>Age Range</th>
-                  <th>Starting Weight</th>
-                  <th>BMI</th>
-                  <th>Wk 1</th>
-                  <th>Wk 2</th>
-                  <th>Wk 3</th>
-                  <th>Wk 4</th>
-                  <th>Mo 2</th>
-                  <th>Mo 3</th>
-                  <th>Mo 4</th>
-                  <th>Mo 5</th>
-                  <th>Mo 6</th>
-                  <th>Mo 9</th>
-                  <th>Mo 12</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr id="estimate-row"></tr>
-              </tbody>
-            </table>
           </div>
         </section>
 
@@ -340,23 +375,99 @@
       const estimateWeight = document.getElementById("estimate-weight");
       const estimateSummary = document.getElementById("estimate-summary");
       const estimateRow = document.getElementById("estimate-row");
+      const estimateChart = document.getElementById("estimate-chart");
+      const statBmi = document.getElementById("stat-bmi");
+      const statLoss = document.getElementById("stat-loss");
+      const statWeightRange = document.getElementById("stat-weight-range");
+      const statBmiRange = document.getElementById("stat-bmi-range");
 
       const points = [
-        { label: "Wk 1", factor: 0.0045 },
-        { label: "Wk 2", factor: 0.009 },
-        { label: "Wk 3", factor: 0.013 },
-        { label: "Wk 4", factor: 0.018 },
-        { label: "Mo 2", factor: 0.03 },
-        { label: "Mo 3", factor: 0.045 },
-        { label: "Mo 4", factor: 0.06 },
-        { label: "Mo 5", factor: 0.072 },
-        { label: "Mo 6", factor: 0.085 },
-        { label: "Mo 9", factor: 0.11 },
-        { label: "Mo 12", factor: 0.13 }
+        { label: "Wk 1", factor: 0.005 },
+        { label: "Wk 2", factor: 0.011 },
+        { label: "Wk 3", factor: 0.017 },
+        { label: "Wk 4", factor: 0.024 },
+        { label: "Mo 2", factor: 0.04 },
+        { label: "Mo 3", factor: 0.06 },
+        { label: "Mo 4", factor: 0.078 },
+        { label: "Mo 5", factor: 0.094 },
+        { label: "Mo 6", factor: 0.11 },
+        { label: "Mo 9", factor: 0.14 },
+        { label: "Mo 12", factor: 0.17 }
       ];
+
+      const ageFactors = {
+        "20-30": 1.03,
+        "31-40": 1.01,
+        "41-50": 0.98,
+        "51-60": 0.94,
+        "61-70": 0.89,
+        "71-80": 0.84,
+        "80+": 0.78
+      };
 
       function clamp(value, min, max) {
         return Math.min(Math.max(value, min), max);
+      }
+
+      function calculateBmi(weight, totalInches) {
+        if (!totalInches || !weight) return 0;
+        return (weight / (totalInches * totalInches)) * 703;
+      }
+
+      function buildChart(labels, lowWeights, midWeights, highWeights) {
+        const width = 920;
+        const height = 340;
+        const left = 56;
+        const right = 22;
+        const top = 20;
+        const bottom = 48;
+        const chartWidth = width - left - right;
+        const chartHeight = height - top - bottom;
+        const allValues = [...lowWeights, ...midWeights, ...highWeights];
+        const minValue = Math.min(...allValues);
+        const maxValue = Math.max(...allValues);
+        const valueRange = Math.max(maxValue - minValue, 8);
+        const xStep = chartWidth / (labels.length - 1);
+
+        function yFor(value) {
+          return top + ((maxValue - value) / valueRange) * chartHeight;
+        }
+
+        function pointPath(values) {
+          return values
+            .map((value, index) => `${left + index * xStep},${yFor(value)}`)
+            .join(" ");
+        }
+
+        const lowPoints = pointPath(lowWeights);
+        const midPoints = pointPath(midWeights);
+        const highPoints = pointPath(highWeights);
+        const bandPoints = `${lowPoints} ${highWeights.slice().reverse().map((value, index) => {
+          const reversedIndex = highWeights.length - 1 - index;
+          return `${left + reversedIndex * xStep},${yFor(value)}`;
+        }).join(" ")}`;
+
+        const gridLines = Array.from({ length: 5 }, (_, index) => {
+          const value = maxValue - (valueRange / 4) * index;
+          const y = yFor(value);
+          return `
+            <line class="chart-grid-line" x1="${left}" y1="${y}" x2="${width - right}" y2="${y}"></line>
+            <text class="chart-axis" x="8" y="${y + 4}">${value.toFixed(0)} lb</text>
+          `;
+        }).join("");
+
+        const xLabels = labels.map((label, index) => `
+          <text class="chart-label" x="${left + index * xStep}" y="${height - 14}" text-anchor="middle">${label}</text>
+        `).join("");
+
+        estimateChart.innerHTML = `
+          ${gridLines}
+          <polygon class="chart-band" points="${bandPoints}"></polygon>
+          <polyline class="chart-low" points="${lowPoints}"></polyline>
+          <polyline class="chart-mid" points="${midPoints}"></polyline>
+          <polyline class="chart-high" points="${highPoints}"></polyline>
+          ${xLabels}
+        `;
       }
 
       function updateEstimate() {
@@ -366,33 +477,56 @@
         const inches = Number(estimateHeightInches.value || 0);
         const weight = Number(estimateWeight.value || 0);
         const totalInches = feet * 12 + inches;
-        const bmi = totalInches > 0 ? (weight / (totalInches * totalInches)) * 703 : 0;
+        const startBmi = calculateBmi(weight, totalInches);
 
-        let ageFactor = 1;
-        if (age === "40-55") ageFactor = 0.95;
-        if (age === "56+") ageFactor = 0.87;
+        const ageFactor = ageFactors[age] || 0.94;
+        const sexFactor = sex === "male" ? 1.06 : 1;
+        const bmiFactor = clamp((startBmi - 24) / 16, 0.88, 1.22);
 
-        let sexFactor = sex === "male" ? 1.08 : 1;
-        let bmiFactor = clamp((bmi - 24) / 18, 0.85, 1.35);
+        const lowFactor = ageFactor * sexFactor * bmiFactor * 0.84;
+        const highFactor = ageFactor * sexFactor * bmiFactor * 1.28;
+        const midFactor = (lowFactor + highFactor) / 2;
 
-        const lowFactor = ageFactor * sexFactor * bmiFactor * 0.9;
-        const highFactor = ageFactor * sexFactor * bmiFactor * 1.1;
+        const labels = ["Start", ...points.map((point) => point.label)];
+        const lowWeights = [weight];
+        const midWeights = [weight];
+        const highWeights = [weight];
 
         const cells = [];
         cells.push(`<td>${sex === "male" ? "Male" : "Female"}</td>`);
         cells.push(`<td>${age}</td>`);
         cells.push(`<td>${weight.toFixed(0)} lb</td>`);
-        cells.push(`<td>${bmi.toFixed(1)}</td>`);
+        cells.push(`<td>${startBmi.toFixed(1)}</td>`);
 
         points.forEach((point) => {
-          const low = weight * point.factor * lowFactor;
-          const high = weight * point.factor * highFactor;
-          cells.push(`<td>${low.toFixed(1)} to ${high.toFixed(1)} lb</td>`);
+          const lowLoss = weight * point.factor * lowFactor;
+          const highLoss = weight * point.factor * highFactor;
+          const midLoss = weight * point.factor * midFactor;
+          lowWeights.push(weight - lowLoss);
+          midWeights.push(weight - midLoss);
+          highWeights.push(weight - highLoss);
+          cells.push(`<td>${lowLoss.toFixed(1)} to ${highLoss.toFixed(1)} lb</td>`);
         });
 
+        const month12LowWeight = lowWeights[lowWeights.length - 1];
+        const month12HighWeight = highWeights[highWeights.length - 1];
+        const month12LowLoss = weight - month12LowWeight;
+        const month12HighLoss = weight - month12HighWeight;
+        const month12LowBmi = calculateBmi(month12LowWeight, totalInches);
+        const month12HighBmi = calculateBmi(month12HighWeight, totalInches);
+
+        cells.push(`<td>${month12HighBmi.toFixed(1)} to ${month12LowBmi.toFixed(1)}</td>`);
         estimateRow.innerHTML = cells.join("");
+
+        statBmi.textContent = startBmi.toFixed(1);
+        statLoss.textContent = `${month12LowLoss.toFixed(1)} to ${month12HighLoss.toFixed(1)} lb`;
+        statWeightRange.textContent = `${month12HighWeight.toFixed(1)} to ${month12LowWeight.toFixed(1)} lb`;
+        statBmiRange.textContent = `${month12HighBmi.toFixed(1)} to ${month12LowBmi.toFixed(1)}`;
+
         estimateSummary.textContent =
-          `Reference estimate for a ${sex} patient age ${age}, ${feet}'${inches}" and ${weight.toFixed(0)} lb. Estimated BMI: ${bmi.toFixed(1)}. These are average-range planning numbers only and individual results vary.`;
+          `Reference estimate for a ${sex} patient age ${age}, ${feet}'${inches}" and ${weight.toFixed(0)} lb. Starting BMI: ${startBmi.toFixed(1)}. Projected 12-month BMI range: ${month12HighBmi.toFixed(1)} to ${month12LowBmi.toFixed(1)}. These are planning ranges only and individual results vary.`;
+
+        buildChart(labels, lowWeights, midWeights, highWeights);
       }
 
       [estimateSex, estimateAge, estimateHeightFeet, estimateHeightInches, estimateWeight].forEach((input) => {
