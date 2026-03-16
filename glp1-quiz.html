@@ -6,7 +6,7 @@
     <title>GLP-1 Candidate Quiz | CKM Health & Wellness</title>
     <meta
       name="description"
-      content="Take a quick GLP-1 candidate quiz, see a Yes/Maybe/No recommendation, and send the results to CKM Health & Wellness for follow-up."
+      content="Take a quick GLP-1 candidate quiz, see a Yes/Maybe/No recommendation, and understand your best next step with CKM Health & Wellness."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,110 +41,190 @@
 
       <main>
         <section class="page-hero">
-          <div class="page-hero-grid">
+          <div class="quiz-intro">
             <div>
-              <p class="eyebrow">A better first step than guessing</p>
-              <h1>See whether GLP-1 therapy may be worth discussing with Chelsie.</h1>
+              <p class="eyebrow">Quick candidate screen</p>
+              <h1>See whether medically supervised GLP-1 care may be a smart next step for you.</h1>
               <p class="page-lead">
-                This quiz is not a diagnosis and does not replace medical evaluation. It is a
-                guided first look at whether a consultation about GLP-1 therapy makes sense based
-                on your goals, current challenges, and basic safety considerations.
+                This short quiz gives visitors a clearer first-pass answer based on readiness, height, weight,
+                BMI, and a few safety questions. It is designed to make the next step feel easier, not more confusing.
               </p>
+              <div class="page-nav">
+                <a href="#quiz">Start the quiz now</a>
+                <a href="https://34189-1.portal.athenahealth.com/" target="_blank" rel="noreferrer">Schedule a consultation</a>
+              </div>
             </div>
-            <div class="visual-card">
-              <img src="https://ckmhealth.com/wp-content/uploads/2024/06/C4ABFA41-3C70-46D3-91FE-4C6B990191D6-scaled.jpg" alt="Chelsie Mangum placeholder image for GLP-1 quiz" />
+            <div class="quiz-highlight">
+              <div class="visual-card">
+                <img src="https://ckmhealth.com/wp-content/uploads/2024/06/C4ABFA41-3C70-46D3-91FE-4C6B990191D6-scaled.jpg" alt="Chelsie Mangum at CKM Health and Wellness" />
+              </div>
+              <div class="panel-card quiz-preview">
+                <span class="card-kicker">What this quiz does</span>
+                <h3>Simple questions. Clearer direction.</h3>
+                <ul>
+                  <li>Looks at height, weight, and BMI</li>
+                  <li>Uses quick yes/no and multiple-choice answers</li>
+                  <li>Shows a Yes, Maybe, or No result instantly</li>
+                  <li>Points every result toward scheduling with Chelsie</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="quiz">
           <div class="panel-card">
+            <div class="quiz-banner">
+              <div>
+                <p class="eyebrow">Start here</p>
+                <h2>Take the candidate quiz before you book.</h2>
+                <p>
+                  This is the fastest way to get a more informed first impression of whether a medically supervised
+                  GLP-1 program may be worth discussing with CKM.
+                </p>
+              </div>
+              <div class="quiz-banner-note">
+                <strong>What you will need</strong>
+                <span>Your height, your current weight, and a minute or two to answer a few simple questions.</span>
+              </div>
+            </div>
+
             <form id="glp1-quiz" class="quiz-form">
               <div class="form-grid">
                 <div class="field">
                   <label for="fullName">Full name</label>
-                  <input id="fullName" name="fullName" type="text" required />
+                  <input id="fullName" name="fullName" type="text" placeholder="First and last name" required />
                 </div>
                 <div class="field">
                   <label for="email">Email</label>
-                  <input id="email" name="email" type="email" required />
+                  <input id="email" name="email" type="email" placeholder="you@example.com" required />
                 </div>
                 <div class="field">
                   <label for="phone">Phone</label>
-                  <input id="phone" name="phone" type="tel" required />
+                  <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" required />
+                </div>
+                <div class="field">
+                  <label for="sex">Male or female</label>
+                  <select id="sex" name="sex" required>
+                    <option value="">Select one</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                  </select>
                 </div>
                 <div class="field">
                   <label for="ageRange">Age range</label>
                   <select id="ageRange" name="ageRange" required>
                     <option value="">Select one</option>
-                    <option value="1">18 to 29</option>
-                    <option value="2">30 to 44</option>
-                    <option value="2">45 to 59</option>
-                    <option value="1">60 and older</option>
+                    <option value="18-39">18 to 39</option>
+                    <option value="40-55">40 to 55</option>
+                    <option value="56+">56 and older</option>
                   </select>
                 </div>
                 <div class="field">
-                  <label for="goal">Primary goal</label>
-                  <select id="goal" name="goal" required>
-                    <option value="">Select one</option>
-                    <option value="3">Weight loss</option>
-                    <option value="2">Weight loss plus metabolic health</option>
-                    <option value="1">General wellness only</option>
-                  </select>
+                  <label>Height</label>
+                  <div class="inline-fields">
+                    <input id="heightFeet" name="heightFeet" type="number" min="4" max="7" placeholder="Feet" required />
+                    <input id="heightInches" name="heightInches" type="number" min="0" max="11" placeholder="Inches" required />
+                  </div>
                 </div>
                 <div class="field">
-                  <label for="weightChallenge">How long have you struggled with weight?</label>
-                  <select id="weightChallenge" name="weightChallenge" required>
-                    <option value="">Select one</option>
-                    <option value="3">Several years</option>
-                    <option value="2">Within the last one to two years</option>
-                    <option value="1">Recently</option>
-                  </select>
+                  <label for="weight">Current weight in pounds</label>
+                  <input id="weight" name="weight" type="number" min="90" max="600" placeholder="Current weight" required />
                 </div>
-                <div class="field">
-                  <label for="nutritionEffort">Have you already tried nutrition and activity changes?</label>
-                  <select id="nutritionEffort" name="nutritionEffort" required>
-                    <option value="">Select one</option>
-                    <option value="3">Yes, consistently</option>
-                    <option value="2">Somewhat</option>
-                    <option value="0">Not yet</option>
-                  </select>
+              </div>
+
+              <div class="field">
+                <label>How motivated are you to start a program that will help you reach your weight-loss goals now?</label>
+                <div class="option-grid three-up">
+                  <div class="option-card">
+                    <input id="motivation-high" name="motivation" type="radio" value="3" required />
+                    <label for="motivation-high">Very motivated<span>I want to start now and I am ready to commit.</span></label>
+                  </div>
+                  <div class="option-card">
+                    <input id="motivation-medium" name="motivation" type="radio" value="2" />
+                    <label for="motivation-medium">Somewhat motivated<span>I want help, but I still have questions and hesitations.</span></label>
+                  </div>
+                  <div class="option-card">
+                    <input id="motivation-low" name="motivation" type="radio" value="1" />
+                    <label for="motivation-low">Curious but not ready<span>I am exploring options, but not sure I want to begin yet.</span></label>
+                  </div>
                 </div>
-                <div class="field">
-                  <label for="medicalConcern">Do you have weight-related health concerns?</label>
-                  <select id="medicalConcern" name="medicalConcern" required>
-                    <option value="">Select one</option>
-                    <option value="3">Yes</option>
-                    <option value="1">Maybe or not sure</option>
-                    <option value="0">No</option>
-                  </select>
+              </div>
+
+              <div class="field">
+                <label>Have you already tried improving nutrition, activity, or both?</label>
+                <div class="option-grid three-up">
+                  <div class="option-card">
+                    <input id="effort-yes" name="effort" type="radio" value="3" required />
+                    <label for="effort-yes">Yes<span>I have already made a real effort and want more support.</span></label>
+                  </div>
+                  <div class="option-card">
+                    <input id="effort-some" name="effort" type="radio" value="2" />
+                    <label for="effort-some">Somewhat<span>I have tried some changes but not consistently.</span></label>
+                  </div>
+                  <div class="option-card">
+                    <input id="effort-no" name="effort" type="radio" value="0" />
+                    <label for="effort-no">Not yet<span>I am just getting started.</span></label>
+                  </div>
                 </div>
-                <div class="field">
-                  <label for="pregnant">Are you pregnant, trying to become pregnant, or breastfeeding?</label>
-                  <select id="pregnant" name="pregnant" required>
-                    <option value="">Select one</option>
-                    <option value="-10">Yes</option>
-                    <option value="0">No</option>
-                  </select>
+              </div>
+
+              <div class="field">
+                <label>Have weight concerns affected your energy, confidence, or overall health?</label>
+                <div class="option-grid three-up">
+                  <div class="option-card">
+                    <input id="impact-yes" name="impact" type="radio" value="3" required />
+                    <label for="impact-yes">Yes<span>This is affecting my life in a real way.</span></label>
+                  </div>
+                  <div class="option-card">
+                    <input id="impact-maybe" name="impact" type="radio" value="1" />
+                    <label for="impact-maybe">Maybe<span>I think it may be affecting me, but I am not fully sure.</span></label>
+                  </div>
+                  <div class="option-card">
+                    <input id="impact-no" name="impact" type="radio" value="0" />
+                    <label for="impact-no">No<span>I am mainly exploring for future goals.</span></label>
+                  </div>
                 </div>
-                <div class="field">
-                  <label for="history">Do you have medication or medical history concerns to review?</label>
-                  <select id="history" name="history" required>
-                    <option value="">Select one</option>
-                    <option value="-6">Yes</option>
-                    <option value="1">Not that I know of</option>
-                  </select>
+              </div>
+
+              <div class="field">
+                <label>Are you pregnant, trying to become pregnant, or breastfeeding?</label>
+                <div class="option-grid two-up">
+                  <div class="option-card">
+                    <input id="pregnant-no" name="pregnant" type="radio" value="0" required />
+                    <label for="pregnant-no">No<span>None of those apply right now.</span></label>
+                  </div>
+                  <div class="option-card">
+                    <input id="pregnant-yes" name="pregnant" type="radio" value="-10" />
+                    <label for="pregnant-yes">Yes<span>This is something I need to factor into my decision.</span></label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Do you know of any medical history or medication concerns that should be reviewed before starting a program?</label>
+                <div class="option-grid two-up">
+                  <div class="option-card">
+                    <input id="history-no" name="history" type="radio" value="1" required />
+                    <label for="history-no">No or not sure<span>I would still want a provider to review everything carefully.</span></label>
+                  </div>
+                  <div class="option-card">
+                    <input id="history-yes" name="history" type="radio" value="-4" />
+                    <label for="history-yes">Yes<span>I know there are details that need a closer medical review first.</span></label>
+                  </div>
                 </div>
               </div>
 
               <div class="field">
                 <label for="notes">Anything else you want Chelsie to know?</label>
-                <textarea id="notes" name="notes" placeholder="Tell us about your goals, symptoms, or concerns."></textarea>
+                <textarea id="notes" name="notes" placeholder="Optional: goals, concerns, symptoms, or questions"></textarea>
               </div>
+
+              <p id="quiz-message" class="quiz-message" aria-live="polite"></p>
 
               <div class="cta-row">
                 <button class="button button-primary" type="submit">See my result</button>
-                <a class="button button-secondary" href="https://34189-1.portal.athenahealth.com/" target="_blank" rel="noreferrer">Schedule instead</a>
+                <a class="button button-secondary" href="https://34189-1.portal.athenahealth.com/" target="_blank" rel="noreferrer">Schedule now instead</a>
               </div>
             </form>
 
@@ -153,9 +233,9 @@
               <h3 id="result-heading"></h3>
               <p id="result-copy"></p>
               <p id="result-next"></p>
+              <p id="result-bmi" class="disclaimer"></p>
               <div class="cta-row">
                 <a class="button button-primary" href="https://34189-1.portal.athenahealth.com/" target="_blank" rel="noreferrer">Schedule a consultation with Chelsie</a>
-                <a id="email-link" class="button button-secondary" href="#">Email results to the clinic</a>
               </div>
             </div>
           </div>
@@ -185,26 +265,52 @@
       const heading = document.getElementById("result-heading");
       const copy = document.getElementById("result-copy");
       const next = document.getElementById("result-next");
-      const emailLink = document.getElementById("email-link");
+      const bmiLine = document.getElementById("result-bmi");
+      const message = document.getElementById("quiz-message");
+
+      function getBmi(weight, feet, inches) {
+        const totalInches = feet * 12 + inches;
+        if (!totalInches || !weight) return 0;
+        return (weight / (totalInches * totalInches)) * 703;
+      }
 
       form.addEventListener("submit", (event) => {
         event.preventDefault();
 
+        if (!form.reportValidity()) {
+          message.textContent = "Please complete the required fields so we can calculate your result.";
+          return;
+        }
+
+        message.textContent = "";
+
         const data = new FormData(form);
-        const keys = [
-          "ageRange",
-          "goal",
-          "weightChallenge",
-          "nutritionEffort",
-          "medicalConcern",
-          "pregnant",
-          "history"
-        ];
+        const feet = Number(data.get("heightFeet"));
+        const inches = Number(data.get("heightInches"));
+        const weight = Number(data.get("weight"));
+        const bmi = getBmi(weight, feet, inches);
+
+        if (!feet || weight < 90 || bmi === 0) {
+          message.textContent = "Please enter a valid height and current weight to see your result.";
+          result.classList.remove("show");
+          return;
+        }
 
         let score = 0;
-        keys.forEach((key) => {
+        ["motivation", "effort", "impact", "pregnant", "history"].forEach((key) => {
           score += Number(data.get(key) || 0);
         });
+
+        if (bmi >= 27) {
+          score += 3;
+        } else if (bmi >= 25) {
+          score += 1;
+        } else {
+          score -= 1;
+        }
+
+        if (data.get("ageRange") === "40-55") score += 1;
+        if (data.get("ageRange") === "56+") score -= 1;
 
         let rating = "Maybe";
         let badgeClass = "result-maybe";
@@ -219,7 +325,7 @@
         } else if (score >= 10) {
           rating = "Yes";
           badgeClass = "result-yes";
-          title = "Likely worth discussing";
+          title = "Likely worth discussing now";
           message = "Your answers suggest GLP-1 therapy could be worth exploring with Chelsie in a proper consultation and medical review.";
         } else if (score <= 4) {
           rating = "No";
@@ -232,28 +338,9 @@
         badge.textContent = rating;
         heading.textContent = title;
         copy.textContent = message;
-        next.textContent = "Next step: schedule a consultation with Chelsie so your goals, health history, and options can be reviewed in more detail.";
+        next.textContent = "Next step: schedule a consultation with Chelsie so your goals, health history, and safest options can be reviewed in detail.";
+        bmiLine.textContent = `Reference BMI based on your height and weight: ${bmi.toFixed(1)}. This quiz is only a first-pass screen, not a diagnosis.`;
         result.classList.add("show");
-
-        const subject = encodeURIComponent("New GLP-1 Quiz Result: " + data.get("fullName"));
-        const body = encodeURIComponent(
-          "GLP-1 Quiz Submission\n\n" +
-          "Name: " + data.get("fullName") + "\n" +
-          "Email: " + data.get("email") + "\n" +
-          "Phone: " + data.get("phone") + "\n" +
-          "Result: " + rating + "\n" +
-          "Score: " + score + "\n" +
-          "Age Range: " + data.get("ageRange") + "\n" +
-          "Primary Goal: " + data.get("goal") + "\n" +
-          "Weight Challenge: " + data.get("weightChallenge") + "\n" +
-          "Tried Nutrition/Activity: " + data.get("nutritionEffort") + "\n" +
-          "Weight-Related Concerns: " + data.get("medicalConcern") + "\n" +
-          "Pregnant/Trying/Breastfeeding: " + data.get("pregnant") + "\n" +
-          "Medical History Concerns: " + data.get("history") + "\n" +
-          "Notes: " + data.get("notes")
-        );
-
-        emailLink.href = "mailto:info@ckmhealth.com?subject=" + subject + "&body=" + body;
         result.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     </script>
