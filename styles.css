@@ -178,22 +178,24 @@ h3 {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
   color: var(--ink);
-  line-height: 0.98;
+  line-height: 1.1;
 }
 
 h1 {
-  font-size: clamp(2.5rem, 4vw, 4.3rem);
-  max-width: 12ch;
+  font-size: clamp(1.9rem, 3.2vw, 3.2rem);
+  max-width: 22ch;
 }
 
 h2 {
-  font-size: clamp(2.5rem, 4.8vw, 4.4rem);
-  max-width: 14ch;
+  font-size: clamp(1.3rem, 2vw, 1.9rem);
+  max-width: none;
+  line-height: 1.2;
 }
 
 h3 {
-  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
   margin-bottom: 12px;
+  line-height: 1.25;
 }
 
 .hero-text,
@@ -439,8 +441,8 @@ h3 {
 }
 
 .page-hero h1 {
-  font-size: clamp(2.5rem, 4vw, 4.3rem);
-  max-width: 14ch;
+  font-size: clamp(2rem, 3.4vw, 3.4rem);
+  max-width: 26ch;
 }
 
 .page-lead {
@@ -624,8 +626,8 @@ h3 {
 }
 
 .quiz-banner h2 {
-  font-size: clamp(2rem, 3.6vw, 3rem);
-  max-width: 14ch;
+  font-size: clamp(1.3rem, 2vw, 1.9rem);
+  max-width: none;
 }
 
 .quiz-banner-note {
@@ -1029,11 +1031,11 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(2.9rem, 16vw, 4.4rem);
+    font-size: clamp(1.7rem, 9vw, 2.4rem);
   }
 
   h2 {
-    font-size: clamp(2.1rem, 11vw, 3rem);
+    font-size: clamp(1.2rem, 6vw, 1.7rem);
   }
 
   .portrait-card img {
