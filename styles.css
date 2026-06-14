@@ -183,7 +183,6 @@ h3 {
 
 h1 {
   font-size: clamp(1.9rem, 3.2vw, 3.2rem);
-  max-width: 22ch;
 }
 
 h2 {
@@ -442,7 +441,6 @@ h3 {
 
 .page-hero h1 {
   font-size: clamp(2rem, 3.4vw, 3.4rem);
-  max-width: 26ch;
 }
 
 .page-lead {
@@ -541,6 +539,10 @@ h3 {
 
 .prose {
   max-width: 74ch;
+}
+
+.panel-card.prose {
+  max-width: none;
 }
 
 .prose p,
